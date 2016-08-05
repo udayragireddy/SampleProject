@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project default="jar" name="Zone Academy ANT Prj02 - compile and run JAVA class">
+
+<target name ="run" depends="compile">
+
+<java classname="Uday.java">
+ 
+<classpath path="staging"/>
+
+</java>
+
+</target>
+
+<target name="compile" depends="jar">
+
+<javac includeantruntime="false" srcdir="./src" destdir="staging" />
+
+</target>
+
+<target name="jar">
+
+ <jar destfile="target/app.jar" basedir="staging"/>
+ 
+</target>
+
+</project>
