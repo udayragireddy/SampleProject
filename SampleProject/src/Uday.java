@@ -9,7 +9,7 @@ public class Uday {
 	        public static void main(String[] args) {
 	               
 	                int radius = 0;
-	                System.out.println("Please enterrrrrr radius of a circle");
+	                System.out.println("Please enterrrrrrr radius of a circle");
 	               
 	                try
 	                {
