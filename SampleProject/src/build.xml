@@ -2,25 +2,30 @@
 
 <project default="jar" name="Zone Academy ANT Prj02 - compile and run JAVA class">
 
-<target name ="run" depends="compile">
+	 <target name="clean">
+	        <delete file="./target/uday1.jar"/>
+	    </target>
+	
+	
+<target name ="run" depends="clean">
 
 <java classname="Uday.java">
  
-<classpath path="staging"/>
+<classpath path="./"/>
 
 </java>
 
 </target>
 
-<target name="compile" depends="jar">
+<target name="compile" depends="run">
 
-<javac includeantruntime="false" srcdir="./src" destdir="staging" />
+<javac includeantruntime="false" srcdir="./" destdir="target" />
 
 </target>
 
-<target name="jar">
+<target name="jar" depends="compile">
 
- <jar destfile="target/app.jar" basedir="staging"/>
+<jar destfile="target/uday1.jar" basedir="."/>
  
 </target>
 
